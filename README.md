@@ -17,7 +17,7 @@ Feel free to browse through the content, enhance your understanding of Web API c
 
 ## Day 1
 
-###  [Lecture Repository](https://github.com/Amirwahied/Asp.Net-Core-API-ITI-Intake43/tree/main/Day%201/Lecture/CRUDLectureExample) 
+###  [Lecture Repository](https://github.com/Amirwahied/Asp.Net-Core-API-ITI-Intake43/tree/main/Day%201/LectureExample)
 
 #### Simple CRUD Operations in the API Project
 
@@ -33,7 +33,7 @@ This API project offers basic CRUD functionality for managing a single model. He
 - **Controllers**: The CRUD operations are implemented in controller classes within the API project. Each controller handles requests for a specific entity type and maps them to corresponding methods for CRUD operations.
 - **Models**: The model class representing the entity is defined within the project, typically in a `Models` or `Entities` folder. This class defines the structure and properties of the entity.
 
-### [Assignment Repository](https://github.com/Amirwahied/Asp.Net-Core-API-ITI-Intake43/tree/main/Day%201/Lecture/CRUDLectureAssignmnet)
+### [Assignment Repository](https://github.com/Amirwahied/Asp.Net-Core-API-ITI-Intake43/tree/main/Day%201/Assignment)
 
 #### Project Overview
 
