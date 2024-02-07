@@ -8,9 +8,67 @@ Welcome to the repository where you'll find comprehensive lecture summaries and 
 
 Explore lecture videos on our Google Drive: [Web API ITI](https://drive.google.com/drive/folders/132BVat005UmrZJdR4KSCcAa0hu_1aH1q?fbclid=IwAR1H6MBb6_0uFpI7t-EJEXVLOrEI4nwjEo5pnvsy475pcYsHNY1paY9Pxz0)
 
+If you're working with the Web API projects in this repository, follow these steps to ensure smooth setup:
+
+1. **Download the Repository**: Start by cloning or downloading the repository to your local machine.
+2. **Adjust Connection String**: Open the `appsettings.json` file within each Web API project. Locate the `ConnectionStrings` section and ensure that the connection string named `Default` is properly configured to point to your desired database. Modify the connection string parameters (such as server name, database name, authentication details) as necessary to match your environment.
+
 Feel free to browse through the content, enhance your understanding of Web API concepts, and tackle practical assignments to reinforce your learning. Happy coding!
 
-## Day 1 
+## Day 1
+
+###  [Lecture Repository](https://github.com/Amirwahied/Asp.Net-Core-API-ITI-Intake43/tree/main/Day%201/Lecture/CRUDLectureExample) 
+
+#### Simple CRUD Operations in the API Project
+
+This API project offers basic CRUD functionality for managing a single model. Here's a quick overview:
+
+1. **Create**: Add a new entity by sending a POST request to the appropriate endpoint with the entity data in the request body.
+2. **Read**: Retrieve entities by sending GET requests to the corresponding endpoints. You can fetch all entities or get a specific entity by its criteria.
+3. **Update**: Modify an existing entity by sending a PUT request to the endpoint with the updated entity data in the request body.
+4. **Delete**: Remove an entity by sending a DELETE request to the appropriate endpoint with the entity's identifier.
+
+##### Code Structure:
+
+- **Controllers**: The CRUD operations are implemented in controller classes within the API project. Each controller handles requests for a specific entity type and maps them to corresponding methods for CRUD operations.
+- **Models**: The model class representing the entity is defined within the project, typically in a `Models` or `Entities` folder. This class defines the structure and properties of the entity.
+
+### [Assignment Repository](https://github.com/Amirwahied/Asp.Net-Core-API-ITI-Intake43/tree/main/Day%201/Lecture/CRUDLectureAssignmnet)
+
+#### Project Overview
+
+This API project embodies a structured architecture with three tiers: the Core layer, EF layer, and Presentation layer represented with the API Project.
+
+##### Dependency Structure:
+
+- **API Project**: This layer serves as the presentation layer and depends on the EF Layer, which in turn relies on the Core Layer.
+- **EF Class Library**: This layer encapsulates the Entity Framework (EF) functionality and serves as the data access layer. It relies on the Core Layer.
+- **Core Layer**: This layer contains data transfer objects (DTOs), interfaces, and the model.
+
+##### Key Features:
+
+1. **Code-First Approach**: The project follows the code-first approach, enabling seamless database creation and updates based on entity models.
+2. **Unit of Work**: The implementation of the unit of work pattern ensures transactional integrity and facilitates managing interactions with the database.
+3. **Repository Pattern**: Utilizing a generic repository interface and implementation enhances code reusability and maintainability by providing a consistent way to interact with data.
+4. **Dynamic Search**: The project employs dynamic search capabilities in GET methods, leveraging `Expression<Func<T, bool>>` for flexible and efficient querying.
+
+
+
+#### Core Layer Components:
+
+- **DTOs**: Data transfer objects facilitate smooth communication between layers for create and update actions, accompanied by simple mapping logic.
+- **Interfaces**: The Core Layer houses interfaces defining the unit of work and the base repository for consistent data access patterns.
+- **Model**: The singular model, 'Employee', serves as the primary entity within the application, representing employee data.
+
+
+
+#### EF Layer Components:
+
+- **Context**: The EF Layer hosts the Application DbContext, providing the bridge between the application and the underlying database.
+- **Migrations**: EF Core's migration feature automates the database schema updates, ensuring seamless integration of changes via commands like `add-Migration` and `Update-Database`.
+- **Repositories**: Implementation of the base repository, along with dynamic search capabilities using expressions and function delegates, enriches data access functionality. Additionally, the Employee Repository caters to specific entity operations.
+- **Unit of Work (UOW)**: The implementation of the unit of work pattern within the EF Layer orchestrates database operations and maintains transactional consistency via the ApplicationDbContext.
+- **EFServicesInjection**: This component resolves all dependencies required by the EF Layer, including the unit of work, and configures the connection string for the ApplicationDbContext.
 
 ### Theoretical Part
 
@@ -70,7 +128,7 @@ When the same business logic needs to be utilized across multiple platforms (e.g
 
 ![](D:\Courses\API ITI\Service Provider and Service Consumer.png)
 
-
+![](D:\Courses\API ITI\Web API.jpg)
 
 2- if you do not which platform or application you will create (Mobile application - Web application - Desktop Application)
 
@@ -422,4 +480,4 @@ Then we must use literal differentiation in the segment:
 
 ### Assignment
 
-Web Api with Repository Pattern with more cosmetics on code.
+Web API implements CRUD Operations with Repository Pattern.
